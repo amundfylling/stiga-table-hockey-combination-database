@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* Custom Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables for Ice & Sport Theme */
+:root {
+  --color-ice-50: #f8fafc;
+  --color-ice-100: #f1f5f9;
+  --color-ice-200: #e2e8f0;
+  --color-ice-300: #cbd5e1;
+  --color-ice-400: #94a3b8;
+  --color-ice-500: #64748b;
+  --color-ice-600: #475569;
+  --color-ice-700: #334155;
+  --color-ice-800: #1e293b;
+  --color-ice-900: #0f172a;
+  --color-ice-950: #020617;
+  
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+  --color-accent-600: #0284c7;
+  
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, var(--color-ice-900) 0%, var(--color-ice-950) 100%);
+  min-height: 100vh;
+  color: var(--color-ice-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ice-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-ice-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ice-500);
+}
+
+/* Range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--color-ice-700);
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  background-color: var(--color-accent-500);
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--color-ice-700);
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--color-accent-500);
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
