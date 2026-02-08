@@ -129,7 +129,7 @@ export default function App() {
           <p className="text-center text-slate-500 text-sm">
             Stiga Table Hockey Combination Database is an open-source project.
             <a
-              href="https://github.com"
+              href="https://github.com/amundfylling/stiga-table-hockey-combination-database"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sky-400 hover:text-sky-300 ml-1"

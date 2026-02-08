@@ -26,7 +26,7 @@ export default function EmptyState() {
             </p>
 
             <motion.a
-                href="https://github.com"
+                href="https://github.com/amundfylling/stiga-table-hockey-combination-database"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
