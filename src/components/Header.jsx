@@ -1,7 +1,7 @@
-import { Github, Sparkles } from 'lucide-react';
+import { Github, Sparkles, Plus } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function Header() {
+export default function Header({ onSubmitClick }) {
     return (
         <motion.header
             initial={{ y: -20, opacity: 0 }}
@@ -26,19 +26,32 @@ export default function Header() {
                         </div>
                     </div>
 
-                    {/* GitHub Button */}
-                    <motion.a
-                        href="https://github.com/amundfylling/stiga-table-hockey-combination-database"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg border border-slate-600 transition-colors duration-200"
-                    >
-                        <Github className="w-5 h-5" />
-                        <span className="hidden sm:inline font-medium">Contribute on GitHub</span>
-                        <span className="sm:hidden font-medium">GitHub</span>
-                    </motion.a>
+                    {/* Action Buttons */}
+                    <div className="flex items-center gap-3">
+                        {/* Submit Button */}
+                        <motion.button
+                            onClick={onSubmitClick}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 transition-shadow"
+                        >
+                            <Plus className="w-5 h-5" />
+                            <span className="hidden sm:inline">Submit</span>
+                        </motion.button>
+
+                        {/* GitHub Button */}
+                        <motion.a
+                            href="https://github.com/amundfylling/stiga-table-hockey-combination-database"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg border border-slate-600 transition-colors duration-200"
+                        >
+                            <Github className="w-5 h-5" />
+                            <span className="hidden sm:inline font-medium">GitHub</span>
+                        </motion.a>
+                    </div>
                 </div>
             </div>
         </motion.header>

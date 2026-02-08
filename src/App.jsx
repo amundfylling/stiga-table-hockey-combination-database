@@ -4,6 +4,7 @@ import Header from './components/Header';
 import FilterBar from './components/FilterBar';
 import TrickCard from './components/TrickCard';
 import TrickModal from './components/TrickModal';
+import SubmitModal from './components/SubmitModal';
 import EmptyState from './components/EmptyState';
 import { tricksData } from './data/tricksData';
 
@@ -16,6 +17,7 @@ export default function App() {
 
   // Modal state
   const [selectedTrick, setSelectedTrick] = useState(null);
+  const [showSubmitModal, setShowSubmitModal] = useState(false);
 
   // Filter and sort tricks
   const filteredTricks = useMemo(() => {
@@ -70,7 +72,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header onSubmitClick={() => setShowSubmitModal(true)} />
 
       <FilterBar
         searchQuery={searchQuery}
@@ -122,6 +124,12 @@ export default function App() {
           onClose={() => setSelectedTrick(null)}
         />
       )}
+
+      {/* Submit Modal */}
+      <SubmitModal
+        isOpen={showSubmitModal}
+        onClose={() => setShowSubmitModal(false)}
+      />
 
       {/* Footer */}
       <footer className="border-t border-slate-800 mt-12">
